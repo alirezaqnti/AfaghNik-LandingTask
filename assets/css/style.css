@@ -1,0 +1,291 @@
+body {
+    background-color: #ddd;
+}
+
+@font-face {
+    font-family: "Kaghaz";
+    src: local("Kaghaz Bold"), local("Kaghaz-Bold"),
+        url("/assets/fonts/Kaghaz.woff"),
+        url("/assets/fonts/Kaghaz.woff2");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "IRAN-SANS";
+    src: url("/assets/fonts/IRANSansWeb_Light.woff"),
+        url("/assets/fonts/IRANSansWeb_Light.woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "IRAN-SANS-bold";
+    src: url("/assets/fonts/IRANSANS_BOLD.woff");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Ionicons";
+    src: url("/assets/plugins/video-player/ionicons.woff");
+    font-weight: bold;
+}
+
+:root {
+    --bg-yellow: #f9a829;
+    --color-yellow: #ef8826;
+    --form-field-border: #999999;
+    --form-field-border-focus: #727171;
+}
+
+.wrapper {
+    background-color: var(--bg-yellow);
+    position: relative;
+
+}
+
+.introduction {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.head-text {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: justify;
+    font-family: 'IRAN-SANS-bold';
+    color: #3b3b3b;
+}
+
+.text-yellow {
+    color: var(--color-yellow) !important;
+}
+
+.video-box {
+    min-height: 300px;
+    min-width: 300px;
+    max-height: 400px;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 20px;
+    margin-top: 40px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.over-lay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55vh;
+}
+
+.over-lay .top {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.over-lay .top {
+    position: relative;
+    top: 0;
+
+}
+
+.over-lay .blob {
+    position: absolute;
+    background-color: #ffffff26;
+}
+
+.over-lay .top-right.blob {
+    top: 0;
+    right: 22px;
+    width: 160px;
+    height: 150px;
+    border-radius: 100% 0% 43% 57% / 9% 85% 15% 91%;
+}
+
+.over-lay .bottom-left {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: end;
+
+}
+
+.over-lay .bottom-left .blob {
+    border-radius: 50%;
+}
+
+.blob-circle-lg {
+    width: 30px;
+    height: 30px;
+    left: 50px;
+    top: 5px;
+}
+
+.blob-circle-sm {
+    width: 10px;
+    height: 10px;
+    top: -2px;
+    left: 27px;
+}
+
+.top-box,
+.bottom-box {
+    position: relative;
+    z-index: 2;
+}
+
+.top-box {
+    top: 0;
+}
+
+.bottom-box {
+    width: 100%;
+    height: 49vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.bottom-box .offer-box {
+    background-color: #fff;
+    border: 1px solid var(--color-yellow);
+    box-shadow: 0 0px 2px 0.001rem #6d6a6ade;
+    border-radius: 20px;
+    text-align: center;
+    width: 110px;
+    height: 95px;
+    padding: 10px 5px;
+    position: absolute;
+    top: -40px;
+
+}
+
+.bottom-box .offer-box .triangle {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.66rem solid transparent;
+    border-top: 0.8rem solid var(--color-yellow);
+    bottom: -13px;
+    left: 35px;
+}
+
+.bottom-box .offer-box .triangle:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.7rem solid transparent;
+    border-top: 0.89rem solid #fff;
+    bottom: 0.12rem;
+    left: -0.49rem;
+
+}
+
+.bottom-box .offer-box:before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border: 15px solid;
+    border-top-width: 25px;
+    border-left-width: 10px;
+    border-color: transparent transparent transparent transparent;
+    top: 31%;
+    bottom: -40px;
+}
+
+.bottom-box .offer-box .head-text {
+    color: var(--color-yellow);
+    font-size: 35px !important;
+    line-height: 35px;
+
+}
+
+.bottom-box .offer-text {
+    margin-top: 60px;
+}
+
+.bottom-box .offer-text .head-text {
+    font-size: 30px !important;
+}
+
+.form-wrapper {
+    font-family: 'IRAN-SANS';
+}
+
+.form-wrapper .offer-input-group.form-outline {
+    border: 1px solid var(--form-field-border);
+    border-radius: 40px;
+}
+
+.form-wrapper .offer-input-group label {
+    z-index: 10;
+    right: 1.3rem !important;
+    background-color: #fff;
+    padding: 7px 7px;
+    transform: translateY(-1rem) translateY(0.1rem) scale(0.8);
+}
+
+.form-outline .form-control:focus~.form-label {
+    color: var(--form-field-border-focus) !important;
+}
+
+.form-wrapper .offer-input-group.form-outline,
+.form-wrapper .offer-input-group.form-outline .form-control {
+    height: 65px;
+}
+
+
+.form-wrapper .offer-input-group .form-notch {
+    display: none !important;
+}
+
+.btn-form {
+    width: 100%;
+    height: 65px;
+    border-radius: 40px;
+    background-color: var(--bg-yellow) !important;
+    font-family: 'IRAN-SANS-bold';
+    font-size: 25px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.feat-item{
+    position: relative;
+    z-index: 10;
+}
+.feat-item .head-text{
+    font-size: 20px !important;
+    text-align: center;
+}
+
+.feat-item .feat-check{
+    position: absolute;
+    top: -12px;
+    left: 40px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--bg-yellow);
+    font-size: 14px;
+    padding: 1px 3px 3px;
+}
+.feat-item .feat-icon{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #e0e0e0;
+}
